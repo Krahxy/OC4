@@ -65,6 +65,10 @@ if (isset($_GET['action'])) {
         commentSignal($_GET['idcomment'], $_GET['idarticle']);
     }
 
+    if ($_GET['action'] == 'delete') { // Supprimer un commentaire
+        deleteComment($_GET['idcomment']);
+    }
+
 } else {
     home();
 }
