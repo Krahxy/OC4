@@ -16,18 +16,17 @@ class Comment extends Manager {
         return $req;
     }
 
-    // Fonction pour récupérer tous les commentaires signalés
-    // public function delete($id_article, $author, $comments) {
-    //     $db = $this -> dbConnect();
-    //     $req = $db -> prepare('DELETE INTO comments (id_article, author, comments) VALUES(?, ?, ?)');
-    //     $req -> execute(array(
-    //         $id_article,
-    //         $author,
-    //         $comments
-    //     ));
+    // Fonction pour supprimer un commentaire
+    public function delete($id) {
+        $db = $this -> dbConnect();
+        $req = $db -> prepare('DELETE FROM comments WHERE id = ?');
+        $req -> execute(array(
+            $id
+        ));
 
-    //     return $req;
-    // }
+        echo "Le commentaire a bien été supprimé";
+        return $req;
+    }
 
     public function signalComment($idComment) { // On regarde si les pseudos sont admins
 
