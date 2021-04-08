@@ -22,10 +22,12 @@
             
             while ($comment = $comments -> fetch(PDO::FETCH_OBJ)) { ?>
                     <div class="commentBloc">
+                    
                         <img src="public\img\man.png" alt="Logo de profil'" id="infoLogo" />
                         <div class="contentCommentBloc">
                             <p><strong><span><?php echo htmlspecialchars_decode($comment -> author); ?> </span></strong><span class="commentDate">- <?php echo htmlspecialchars_decode($comment -> date); ?></span></p>
                             <p><?php echo htmlspecialchars_decode($comment -> comments); ?></p>
+                            <a href="index.php?action=delete&idcomment=<?php echo $comment -> id ?>"><span class="commentDate">Supprimer ce commentaire</span></a>
                         </div>
                     </div><?php
                 }?>
