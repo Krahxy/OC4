@@ -127,3 +127,8 @@ function commentsPage($id_article, $author, $comments) { // AFFICHAGE DES COMMEN
     $resultat = $req -> fetch();
     header('Location: index.php?action=commentairesPage&article=' . $id_article);
 }
+
+function deleteComment($idArticle) {
+    $deleteComment = new Comment();
+    $req = $deleteComment -> delete($idArticle);
+}
