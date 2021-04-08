@@ -1,0 +1,386 @@
+/* CORPS */
+
+body, html {
+    background-color: #192534;
+    color: white;
+    vertical-align: middle;
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+/* LOGIN */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.login input {
+    margin: 10px 0 10px 0;
+}
+
+/* HOME */
+
+.home {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homeContent {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 50px;
+}
+
+.homeContent p {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.home h2, .login h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4em;
+    letter-spacing: .3em;
+}
+
+#fond {
+    max-width: 100vw;
+    width: 100vw;
+    height: auto;
+    z-index: 0;
+}
+
+/* HOME BOOK CONTENT */
+
+#titleInfos {
+    text-align: center;
+    margin-top: 100px;
+    letter-spacing: .2em;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5em;
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 65vw;
+    width: 65vw;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+.bloc {
+    width: 200px;
+    text-align: center;
+}
+
+.bloc img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.bloc p {
+    color: #999999;
+}
+
+.bloc h2 {
+    margin: 10px 0 18px 0;
+}
+
+.identity {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.identity img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* ARTICLES PAGE LIST */
+
+table {
+    background-color: white;
+    color: black;
+    max-width: 60vw;
+    text-align: center;
+    margin: 15vh auto 0 auto;
+}
+
+table tr {
+    vertical-align: middle;
+}
+
+table p {
+    font-weight: lighter;
+    margin: 0;
+}
+
+fa-eye {
+    color: green;
+}
+
+/* ONE ARTICLE */
+
+.bodyArticle {
+    margin-top: 15vh;
+}
+
+.articleContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    background-color: white;
+    width: 60vw;
+    border-bottom: 7px solid grey;
+}
+
+#infoLogo {
+    width: 53px;
+    height: 53px;
+    margin: 10px;
+}
+
+.articleContent h5 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    margin: 0;
+}
+
+.titleBloc {
+    display: flex;
+    border-bottom: 1px dashed #999999;
+    align-items: center;
+    width: 100%;
+}
+
+.articleContent p, .articleContent h5 {
+    color: black;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+.contentBloc {
+    padding: 30px;
+    vertical-align: middle;
+}
+
+.articleContent form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.articleContent .btn {
+    width: 200px;
+    margin: 0 auto 30px auto;
+}
+
+/* COMMENTS */
+
+.commentBloc {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #999999;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.contentCommentBloc {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentDate {
+    color: black;
+    font-size: .8em;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    max-width: 100vw;
+    width: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	color: inherit;
+	text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.navbar a {
+    margin-left: 34px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+    margin: 0;
+}
+
+.navImg {
+    padding: 0;
+    margin: 0;
+}
+
+.title_img {
+    width: 64px;
+    height: auto;
+    margin-left: 50px;
+}
+
+/* GLOBAL CONTENT */
+
+.main {
+    margin: auto;
+    margin-top: 15vh;
+    text-align: center;
+    max-width: 80vh;
+}
+
+/* OTHERS */
+
+#mytextarea {
+    height: 400px;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+span {
+    color: skyblue;
+}
+
+#arrowUp {
+    width: 70px;
+    height: auto;
+    position: fixed;
+    top: calc(50%);
+    right: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    height: 30vh;
+    width: 100vw;
+    background-color: #1e1e1e;
+    display: flex;
+    margin-top: 100px;
+}
+
+.footerBloc {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerBloc h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 1.4em;
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+.footerBloc a {
+    font-family: 'Roboto', sans-serif;
+    color: #838383;
+    text-decoration: none;
+    font-size: .9em;
+}
+
+.footerBloc a:hover {
+    color: #08a8ee;
+}
+
+.footerBloc ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 752px) {
+
+    .navImg {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    table {
+        max-width: 90vw;
+    }
+
+    .navbar-brand {
+        font-size: .8em;
+    }
+
+    nav li {
+        font-size: .8em;
+
+    }
+    
+
+    .navbar {
+        justify-content: center;
+    }
+}
