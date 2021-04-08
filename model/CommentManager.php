@@ -16,6 +16,7 @@ class Comment extends Manager {
         return $req;
     }
 
+    // Fonction pour récupérer tous les commentaires signalés
     // public function delete($id_article, $author, $comments) {
     //     $db = $this -> dbConnect();
     //     $req = $db -> prepare('DELETE INTO comments (id_article, author, comments) VALUES(?, ?, ?)');
