@@ -13,7 +13,6 @@
             tinymce.init({
                 selector: '#mytextarea'
             });
-    </script>
+        </script>
     </head>
-
-    <body>
+<body>
