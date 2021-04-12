@@ -25,6 +25,7 @@ header {
     justify-content: center;
     text-align: center;
     align-items: center;
+    height: 100vh;
 }
 
 .login input {
@@ -120,6 +121,7 @@ header {
     justify-content: center;
     text-align: center;
     margin: auto;
+    margin-bottom: 200px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -148,6 +150,14 @@ table p {
     margin: 0;
 }
 
+.table {
+    margin-bottom: 200px;
+}
+
+.listingArticles {
+    height: 100vh;
+}
+
 fa-eye {
     color: green;
 }
@@ -155,7 +165,7 @@ fa-eye {
 /* ONE ARTICLE */
 
 .bodyArticle {
-    margin-top: 15vh;
+    margin: 15vh 0 15vh 0;
 }
 
 .articleContent {
@@ -272,13 +282,21 @@ nav ul {
 /* GLOBAL CONTENT */
 
 .main {
-    margin: auto;
-    margin-top: 15vh;
+    margin: 15vh auto 15vh auto;
     text-align: center;
     max-width: 80vh;
 }
 
 /* OTHERS */
+
+.errorBody {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 #mytextarea {
     height: 400px;
@@ -351,6 +369,12 @@ footer {
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .articleContent {
+        width: 95%;
+    }
+}
 
 @media screen and (max-width: 752px) {
 
