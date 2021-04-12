@@ -46,8 +46,8 @@ function signupEnd($pseudo, $pass, $pass2, $email) {
         $emailExist = $req2 -> rowCount();
     
         if ($pseudoExist == 1 || $emailExist == 1) {
-            echo 'Pseudo ou email déjà utilisé';
-            require('./view/signup.php');
+            $message='Pseudo ou Email déjà utilisé.';
+            header('Location: index.php?action=error&message='.$message);
         } else {
             $users = $regUser -> add($pseudo, $passHash, $email);
             require('./view/login.php');
@@ -69,7 +69,8 @@ function loginPage($pseudo, $pass) { // Connexion du membre si les mots de passe
     $resultat2 = $req2 -> fetch();
     $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']); // On vérifie si le mot de passe corresponds au mot de passe hashé
     if (!$resultat) {
-        echo 'Mauvais identifiant ou mot de passe !';
+        $message='Pseudo ou Email déjà utilisé.';
+        header('Location: index.php?action=error&message='.$message);
     } else {
         if ($isPasswordCorrect) {
             $_SESSION['id'] = $resultat['id'];
@@ -77,7 +78,8 @@ function loginPage($pseudo, $pass) { // Connexion du membre si les mots de passe
             $_SESSION['status'] = $resultat2[0];
             header('Location: index.php?action=articlesPage');
         } else {
-            echo 'Mauvais identifiant ou mot de passe !';
+            $message = 'Mauvais identifiant ou mot de passe.';
+            header('Location: index.php?action=error&message='.$message);
         }
     }
         
@@ -131,4 +133,14 @@ function commentsPage($id_article, $author, $comments) { // AFFICHAGE DES COMMEN
 function deleteComment($idArticle) {
     $deleteComment = new Comment();
     $req = $deleteComment -> delete($idArticle);
+    $message = 'Le commentaire a bien été supprimé.';
+    header('Location: index.php?action=info&message='.$message);
+}
+
+function errorPage($errorMessage) {
+    require('./view/error.php');
+}
+
+function infoPage($infoMessage) {
+    require('./view/info.php');
 }
