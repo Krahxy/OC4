@@ -53,9 +53,6 @@
     </div>
 </section>
 
-<a href="#"><img src="public\img\arrow-up.png" alt="Logo de flèche" id="arrowUp" /></a>
-
-
 <?php include("./view/_footer.php"); ?>
 
 
