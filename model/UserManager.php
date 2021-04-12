@@ -49,7 +49,6 @@ class User extends Manager {
         ));
         return $req;
     }
-
 }
 
 ?>
