@@ -9,6 +9,10 @@ if (isset($_GET['action'])) {
         errorPage($_GET['message']);
     }
 
+    if ($_GET['action'] == 'info') {
+        infoPage($_GET['message']);
+    }
+
     if ($_GET['action'] == 'adminPanel') {
         adminPanel();
     }
